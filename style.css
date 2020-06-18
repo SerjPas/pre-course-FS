@@ -1,0 +1,454 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    background-image: linear-gradient(to bottom right, lightgray, white);
+    font-family: 'Oxygen', sans-serif;
+    font-size: 16px;
+    /*font-size: 1.6rem;*/
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    /*border: 1px solid red;*/
+    align-items: center;
+    background-image: linear-gradient(to bottom right, white, lightgray);
+    border-radius: 10px;
+    -webkit-box-shadow: 4px 4px 40px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 4px 4px 40px 0px rgba(0, 0, 0, 1);
+    box-shadow: 4px 4px 40px 0px rgba(0, 0, 0, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    padding: 20px 40px 25px;
+    width: 90%;
+    -webkit-transition-property: border-radius;
+    -moz-transition-property: border-radius;
+    -o-transition-property: border-radius;
+    transition-property: border-radius;
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+    -webkit-transition-timing-function: linear;
+    -moz-transition-timing-function: linear;
+    -o-transition-timing-function: linear;
+    transition-timing-function: linear;
+    z-index: 10;
+}
+
+.card:hover {
+    border-radius: 15%;
+}
+
+#brand {
+    cursor: grab;
+    z-index: 10;
+}
+
+#brand:hover {
+    border: 1px solid red;
+
+}
+
+.fun-hover {
+    background-image: -webkit-linear-gradient(left, rgb(115, 145, 105) 50%, yellow 50%);
+    background-image: linear-gradient(to right, rgb(115, 145, 105) 50%, yellow 50%);
+    background-position: 0;
+    background-size: 200%;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    margin: 2rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+.fun-hover:hover {
+    background-position: -100%;
+}
+
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.about-me {
+    /* border: 1px solid yellow; */
+    margin: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+
+#Myphoto {
+    border-radius: 10rem;
+}
+
+.leftheader {
+    flex-basis: 40%;
+    text-align: right;
+    /*border: 3px dotted green;*/
+    padding-right: 0.5rem;
+}
+
+.rightheader {
+    flex-basis: 60%;
+    /*border: 3px dotted blue;*/
+    margin-top: 2rem;
+    padding-left: 0.5rem;
+}
+
+.home-map {
+    /*border: 1px solid yellow;*/
+    margin: 2rem 1rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.gallery-map {
+    display: none;
+    max-height: 600px;
+}
+
+.active {
+    display: block;
+
+}
+
+.image-gallery {
+    /*for centering content*/
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover {
+    background-color: lightgray;
+    color: black;
+    border: none;
+    border-radius: 1rem;
+}
+
+.btns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    background-color: #0074d9;
+    color: white;
+    text-decoration: none;
+    border: none;
+    font-size: 1rem;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    /*padding: 5px 20px;*/
+    border-radius: 1rem;
+    width: 120px;
+    cursor: pointer;
+}
+
+.button:disabled {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+
+}
+
+.prev {
+    margin-right: 15px;
+}
+
+.cities {
+    list-style: none;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.contact-form {
+    flex-direction: column;
+    margin-right: 10%;
+}
+
+label {
+    display: block;
+}
+
+input,
+textarea {
+    width: 20rem;
+    font-family: Oxygen, Arial, Helvetica, sans-serif;
+    /*font-size: 1em;*/
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    margin: 0.8rem;
+}
+
+.red {
+    color: #ff0000;
+}
+
+/*input:required:valid {*/
+/*    border: 1px solid green;*/
+/*}*/
+
+/*input:required:invalid {*/
+/*    border: 1px solid red;*/
+/*}*/
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-item {
+    /*border: 1px solid red;*/
+    color: #3d6ded;
+    font-size: 1rem;
+    margin: 0.7rem;
+    padding: 0.7rem 0.7rem;
+    text-decoration: none;
+
+}
+
+.topnav {
+    /*border: 1px solid yellow;*/
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+    /*border-radius: 1rem;*/
+    border-radius: 0 0 1rem 1rem;
+    list-style: none;
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 11;
+
+}
+.topnav ul{
+    list-style: none;
+    display: flex;
+}
+
+.topnav a {
+    color: #f2f2f2;
+    text-align: center;
+    border-radius: 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+/*.topnav a.active {*/
+/*    background-color: #4CAF50;*/
+/*    color: white;*/
+
+/*}*/
+
+.page-wrapper {
+    /*border: 1px solid pink;*/
+    overflow: auto;
+    align-items: center;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 15.5rem;
+    margin-top: 2.9rem;
+}
+
+.profile-image {
+    background-color: black;
+    border-radius: 50%;
+    color: white;
+    font-size: 32px;
+    height: 180px;
+    margin: 20px;
+    width: 180px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.h1 {
+    margin-bottom: 0.1em;
+    font-size: 44px;
+    /*font-size: 4.4rem;*/
+    font-family: "neosans regular", "Helvetica Neue", Helvetica, Arial, Sans-serif, serif;
+    color: #333;
+    letter-spacing: -0.07em;
+}
+
+p, #myText {
+    margin-bottom: 1.4em;
+    line-height: 1.4em;
+    -webkit-font-smoothing: antialiased;
+}
+
+p.intro{
+    font-size: 16px;
+    /*font-size: 1.6rem;*/
+    color: #666666;
+    line-height: 1.3em;
+    margin-bottom: 0.7em;
+    clear: both;
+}
+
+#Serhii\ Pas {
+    text-align: center;
+    margin-top: 0;
+}
+
+.clickable {
+    /*border: 1px solid red;*/
+    background-color: #3d6ded;
+    border-radius: 1rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.1rem;
+    padding: 0.5rem;
+}
+
+.clickable:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.footer {
+    /*border: 2px dotted blueviolet;*/
+    width: 100%;
+    height: 250px;
+    position: fixed;
+    bottom: 0;
+    background-color: #333;
+    padding: 0;
+    margin: -15.5rem 0 0;
+    border-radius: 1rem 1rem 0 0;
+
+
+}
+
+.footer-wrapper {
+    width: auto;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+
+}
+
+.single-footer {
+    /*border: 1px dotted yellow;*/
+    width: 33%;
+    color: #fff;
+    padding-left: 4rem;
+
+    margin: 0;
+
+}
+
+.single-footer ul {
+    flex-flow: nowrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.single-footer ul a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin: 0.5rem 0;
+    padding: 0.4rem;
+}
+.single-footer ul a:hover {
+  border: 1px solid grey;
+    border-radius: 0.8rem;
+}
+
+
+.single-footer p {
+    width: 80%;
+}
+.container{
+    min-height: 100%;
+}
+blockquote {
+    margin: 0;
+flex-flow: nowrap;
+    border-top: 5px solid #EAF9F9;
+    border-bottom: 5px solid #EAF9F9;
+    color: #3A3C55;
+    padding: 30px 30px 30px 90px;
+    position: relative;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+
+}
+blockquote:before {
+    content: "\201C";
+    font-family: serif;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    color: white;
+    background: #FB6652;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 50px;
+    line-height: 1.35;
+    text-align: center;
+}
+blockquote p {
+    margin: 0 0 16px;
+    font-size: 22px;
+    letter-spacing: .05em;
+    line-height: 1.4;
+}
+blockquote cite {
+    font-style: normal;
+}
+.cities{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.cities  a {
+    text-transform: uppercase;
+    color: black;
+    font-size: 14px;
+    margin: 0.5rem 0;
+    padding: 0.4rem;
+}
+.cities  a:hover {
+    border: 1px solid grey;
+    border-radius: 0.5rem;
+
+}
